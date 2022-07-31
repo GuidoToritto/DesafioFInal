@@ -1,0 +1,67 @@
+@import "base/variables";
+@import "base/listas";
+@import "base/mixin";
+@import "base/extend";
+@import "base/mediaquery";
+
+
+/*estilos de header*/
+
+
+
+.header{
+    background-image: linear-gradient($color-principal, $color-secundario);
+    width: $medida-principal;
+    /*mixin*/
+    @include flex-roww;
+    /*extend*/
+    @extend %botones;
+    animation: move 3s ease-in-out;
+}
+
+.banner{
+    /*extend*/
+    @extend %botones;
+    animation: move 3s ease-in-out;
+}
+.a{
+    list-style-type: none;
+    text-decoration: none;
+    color: nth($list: $colores , $n:3);
+    @extend %botones;
+    font-size: 15px;
+    animation: move 3s ease-in-out;
+}
+.main{
+    width: $medida-principal;
+    background-image: linear-gradient($color-tercero, $color-secundario);
+    /*extend*/
+    @extend %botones;
+    animation: move 3s ease-in-out;
+}
+.footer{
+    background-image: linear-gradient($color-secundario, $color-tercero);
+    width: $medida-principal;
+    color: nth($list: $colores , $n:3);
+    /*mixin*/
+    @include flex-roww;
+    /*extend*/
+    @extend %botones;
+    animation: move 3s ease-in-out;
+}
+
+@keyframes move {
+    0%{
+        transform: translate(-30%, 0);
+    }
+   
+    1000%{
+        transform: translate(30%, 0);
+    }
+}
+
+.letrascont{
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+}

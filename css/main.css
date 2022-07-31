@@ -1,159 +1,89 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+@charset "UTF-8";
+/* mixin sin parámetros */
+.header, .banner, .a, .main, .footer {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px; }
 
-/*HEADER*/
-.header{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0px 300px 0px 300px;
-    background-image: linear-gradient(to bottom, white, rgba(79, 100, 174, 0.659));
-    animation: move 3s ease-in-out;
-}
-
-
-/*Body*/
-.body{
-    background-image: linear-gradient(to bottom, rgba(196, 196, 196, 0.648), rgba(0, 13, 65, 0.463));}
-
-.nav{
-    display: flex;
-    width: 100%;  
-}
-
-.banner{
-    animation: move 3s ease-in-out;
-}
-
-.ul{
-    display: flex;
-    list-style-type: none;
-    width: 100%;
-    justify-content: flex-end;
-    
-
-}
-
-.a{
-    display: flex;
+@media (max-width: 991px) {
+  .imagen {
+    width: 0px; }
+  .a {
     padding: 30px;
-    font-size: 25px;
-    color: whitesmoke;
-    animation: move 3s ease-in-out;
-    text-decoration: none;
-}
+    font-size: 20px;
+    display: block; }
+  .nav {
+    display: block; }
+  .imagen {
+    width: 100px; }
+  .header {
+    background-image: linear-gradient(rgba(0, 0, 37, 0.637), #cfcfcf);
+    display: block; }
+  .main {
+    background-image: linear-gradient(rgba(0, 0, 37, 0.544), white);
+    display: flexbox;
+    overflow: auto;
+    justify-content: center; }
+  .row {
+    justify-content: center; }
+  .letras {
+    font-size: 15px;
+    text-align: center;
+    justify-content: center; }
+  .letras {
+    font-size: 20px; }
+  .letrascont {
+    font-size: 10px; } }
 
-.imagen{
-    display: flex;
-    width: 120%;
-}
+/*estilos de header*/
+.header {
+  background-image: linear-gradient(#494d92, whitesmoke);
+  width: 100%;
+  /*mixin*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /*extend*/
+  animation: move 3s ease-in-out; }
+
+.banner {
+  /*extend*/
+  animation: move 3s ease-in-out; }
+
+.a {
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  animation: move 3s ease-in-out; }
+
+.main {
+  width: 100%;
+  background-image: linear-gradient(#9497c2, whitesmoke);
+  /*extend*/
+  animation: move 3s ease-in-out; }
+
+.footer {
+  background-image: linear-gradient(whitesmoke, #9497c2);
+  width: 100%;
+  color: white;
+  /*mixin*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /*extend*/
+  animation: move 3s ease-in-out; }
 
 @keyframes move {
-    0%{
-        transform: translate(-30%, 0);
-    }
-   
-    1000%{
-        transform: translate(30%, 0);
-    }
-}
+  0% {
+    transform: translate(-30%, 0); }
+  1000% {
+    transform: translate(30%, 0); } }
 
-
-/*main*/
-.main{
-    background-image: linear-gradient(to bottom, rgba(79, 100, 174, 0.659), white);
-    animation: move 3s ease-in-out;
-}
-
-
-/*FOOTER*/
-.footer{
-    display: flex;
-    background-image: linear-gradient(to bottom, rgb(51, 51, 51), grey);
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding: 0px 300px 0px 300px;
-    color: white;
-}
-
-
-/*PSEUDO-CLASES*/
-
-.a:hover {
-    font-size: 22px;
-    color: whitesmoke;
-}
-
-.a:visited{
-    color: whitesmoke;
-}
-
-.a:active{
-    font-size: 23px;
-}
-
-div:hover {
-    font-size: 1rem;
-}
-
-/*MAS INFO*/
-
-.meteoritos{
-    font-size: 35px;
-    text-align: center;
-}
-
-.texto{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    font-size: 25px;
-}
-
-@media (max-width: 991px){
-    .imagen{
-        width: 0px;   
-        ;
-    }
-
-    .a{
-        padding: 30px;
-        font-size: 20px;
-        display: block;
-    }
-
-    .luna{
-        width: 10px;
-    }
-
-    .nav{
-        display: block;
-    }
-    
-    .imagen{
-        width: 100px;        
-    }
-
-    .header{
-        background-image: linear-gradient(rgba(0, 0, 37, 0.637), rgb(207, 207, 207));
-        display: block;
-    }
-    
-
-    .main{
-    
-        background-image: linear-gradient(rgba(0, 0, 37, 0.544), rgb(255, 255, 255));
-        display: block;
-        overflow:scroll;
-        
-    }
-
-    .letras{
-        font-size: 80%;
-    }
-
-}
+.letrascont {
+  font-size: 25px;
+  text-align: center;
+  justify-content: center; }

@@ -1,0 +1,57 @@
+@media (max-width: 991px){
+    .imagen{
+        width: 0px;   
+        ;
+    }
+
+    .a{
+        padding: 30px;
+        font-size: 20px;
+        display: block;
+    }
+
+    .nav{
+        display: block;
+    }
+    
+    .imagen{
+        width: 100px;        
+    }
+
+    .header{
+        background-image: linear-gradient(rgba(0, 0, 37, 0.637), rgb(207, 207, 207));
+        display: block;
+    }
+    
+
+    .main{
+    
+        background-image: linear-gradient(rgba(0, 0, 37, 0.544), rgb(255, 255, 255));
+        display:flexbox;
+        overflow:auto;
+        justify-content: center;
+        
+    }
+
+    .row{
+        justify-content: center;
+    }
+
+
+    .letras{
+        font-size: 15px;
+        text-align: center;
+        justify-content: center;
+        
+    }
+
+    .letras{
+        font-size: 20px;
+    }
+
+    .letrascont{
+        font-size: 10px;
+    }
+
+}
+
