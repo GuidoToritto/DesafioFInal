@@ -9,32 +9,38 @@
 @media (max-width: 991px) {
   .imagen {
     width: 0px; }
+  .logo {
+    justify-content: center;
+    grid-area: logo; }
   .a {
-    padding: 30px;
+    padding: 10px;
     font-size: 20px;
-    display: block; }
+    display: flex; }
   .nav {
-    display: block; }
+    display: flex;
+    grid-area: nav; }
   .imagen {
-    width: 100px; }
+    width: 100%; }
   .header {
     background-image: linear-gradient(rgba(0, 0, 37, 0.637), #cfcfcf);
-    display: block; }
-  .main {
-    background-image: linear-gradient(rgba(0, 0, 37, 0.544), white);
-    display: flexbox;
-    overflow: auto;
-    justify-content: center; }
+    width: 100%;
+    flex-wrap: wrap; }
+  .ul {
+    display: flex; }
   .row {
     justify-content: center; }
   .letras {
-    font-size: 15px;
+    font-size: 10px;
     text-align: center;
-    justify-content: center; }
+    justify-content: center;
+    width: 100%; }
+  .row {
+    margin: 10px; }
   .letras {
-    font-size: 20px; }
+    font-size: 30px; }
   .letrascont {
-    font-size: 10px; } }
+    font-size: 10px;
+    width: 100%; } }
 
 /*estilos de header*/
 .header {
@@ -68,7 +74,7 @@
 .footer {
   background-image: linear-gradient(whitesmoke, #9497c2);
   width: 100%;
-  color: white;
+  color: white shadow;
   /*mixin*/
   display: flex;
   flex-direction: row;
@@ -84,6 +90,12 @@
     transform: translate(30%, 0); } }
 
 .letrascont {
-  font-size: 25px;
-  text-align: center;
+  font-size: 25px; }
+
+.letras {
+  font-size: 15px;
+  display: flex; }
+
+.row {
+  display: flex;
   justify-content: center; }

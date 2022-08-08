@@ -42,7 +42,7 @@
 .footer{
     background-image: linear-gradient($color-secundario, $color-tercero);
     width: $medida-principal;
-    color: nth($list: $colores , $n:3);
+    color: nth($list: $colores , $n:3) shadow;
     /*mixin*/
     @include flex-roww;
     /*extend*/
@@ -62,6 +62,15 @@
 
 .letrascont{
     font-size: 25px;
-    text-align: center;
+    
+}
+
+.letras{
+    font-size: 15px;
+    display: flex;
+}
+
+.row{
+    display: flex;
     justify-content: center;
 }
